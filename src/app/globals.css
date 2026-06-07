@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --color-black: #000000;
+  --color-navy: #14213D;
+  --color-accent: #FCA311;
+  --color-light-gray: #fffceb;
+  --color-white: #FFFFFF;
+
+  --bg-primary: var(--color-white);
+  --bg-secondary: var(--color-light-gray);
+  --text-primary: var(--color-black);
+  --text-secondary: #4b5563;
+  --border-color: #d1d5db;
+}
+
+.dark {
+  --bg-primary: var(--color-black);
+  --bg-secondary: var(--color-navy);
+  --text-primary: var(--color-white);
+  --text-secondary: #9ca3af;
+  --border-color: #1e293b;
+}
+
+@theme {
+  --color-black: var(--color-black);
+  --color-navy: var(--color-navy);
+  --color-accent: var(--color-accent);
+  --color-light-gray: var(--color-light-gray);
+  --color-white: var(--color-white);
+
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border-color: var(--border-color);
+}
+
+
+
+/* Apply base styling & smooth transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Custom focus ring styling for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
